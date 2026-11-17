@@ -1,0 +1,16 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { families } from "@/data/services-data";
+import { catalog } from "@/data/catalog";
+import { photoAny } from "@/lib/photos";
+export const metadata:Metadata={title:"Technology Services | Software, AI, Cloud & Cybersecurity",description:"Explore AXNOVATECH software engineering, web and mobile development, AI automation, cloud, data, enterprise software, cybersecurity and product design services.",alternates:{canonical:"/services"}};
+export default function Services(){
+ const hero=photoAny("sec-services","hero-code","hero-team");
+ return <main className="m-page axn-company-page">
+  <section className="m-phero m-phero-ph">{hero&&<img className="m-banner" src={hero} alt="" fetchPriority="high"/>}<div className="container-x"><p className="m-kicker m-amber">WHAT WE DO / TECHNOLOGY SERVICES</p><h1>Engineering capabilities for every stage of digital progress.</h1><p>From discovery and product design to custom software, AI, cloud and ongoing improvement, explore the capabilities AXNOVATECH is building to help organisations solve real business challenges.</p><div className="m-facts"><span><b>{catalog.services.length} capabilities</b>technology service catalogue</span><span><b>End-to-end lifecycle</b>from brief to support</span><Link href="/contact" className="m-btn">Discuss a requirement <ArrowRight size={16}/></Link></div></div></section>
+  <section className="container-x axn-detail-intro"><p className="axn-section-eyebrow">SERVICE PORTFOLIO</p><h2>Choose a capability. <em>Explore the detail.</em></h2><p className="axn-section-lead">Every service page explains the business context, delivery capabilities, project stages, outputs and common questions. Final scope and availability are confirmed during discovery.</p><div className="axn-service-directory axn-service-photo-grid">{catalog.services.map((x,i)=><Link href={`/services/capabilities/${x.slug}`} key={x.slug}><img src={photoAny(`service-${x.slug}`)} alt="" loading="lazy" decoding="async"/><span>CAPABILITY / {String(i+1).padStart(2,"0")}</span><div><h3>{x.title}</h3><p>{x.description}</p><b>Explore capability <ArrowUpRight size={16}/></b></div></Link>)}</div></section>
+  <section className="axn-detail-paper"><div className="container-x"><p className="axn-section-eyebrow">ENGINEERING PRACTICES</p><h2>Specialist practices <em>working together.</em></h2><div className="axn-capability-grid">{families.map((f,i)=><article key={f.slug}><small>PRACTICE / 0{i+1}</small><h3>{f.name}</h3><p>{f.lead}</p><Link href={`/services/${f.slug}`} className="axn-text-link">Explore practice <ArrowRight size={16}/></Link></article>)}</div></div></section>
+  <section className="axn-related"><div className="container-x"><p className="axn-section-eyebrow">RELATED AREAS</p><h2>Explore where technology <em>creates value.</em></h2><div className="axn-related-grid"><Link href="/industries"><span>Industries</span><ArrowUpRight size={17}/></Link><Link href="/solutions"><span>Digital solutions</span><ArrowUpRight size={17}/></Link><Link href="/business-solutions"><span>Business solutions</span><ArrowUpRight size={17}/></Link><Link href="/enterprise-solutions"><span>Enterprise solutions</span><ArrowUpRight size={17}/></Link></div></div></section>
+ </main>;
+}

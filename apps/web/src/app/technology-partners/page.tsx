@@ -1,0 +1,19 @@
+import type { Metadata } from "next";
+import { Banner } from "@/components/banner";
+import Link from "next/link";
+import { ArrowRight, Check } from "lucide-react";
+export const metadata: Metadata = { title: "Technology and Development Partnerships", description: "Explore white-label software development, project delivery and engineering partnerships with AXNOVATECH.", alternates: { canonical: "/technology-partners" } };
+const models = [
+  ["White-label development", "Build agreed parts of your client projects under your agency's delivery model and brand."],
+  ["Project subcontracting", "Take on defined engineering work packages with documented scope, acceptance criteria and handover."],
+  ["Dedicated capacity", "Add development or QA capacity for a defined period, subject to skill and availability confirmation."],
+  ["Product and startup collaboration", "Work together on MVPs, integrations and product engineering with responsibilities agreed up front."],
+];
+const workflow = ["Share your company profile and the capability you need", "Discuss requirements, timelines, security and ownership", "Agree NDA, MSA and project-specific SOW where applicable", "Run a scoped pilot or first delivery milestone", "Review quality and decide on ongoing collaboration"];
+export default function TechnologyPartners() { return <div className="m-page">
+  <section className="m-phero m-phero-ph"><Banner slot="sec-partners" fallback="sec-services" /><div className="container-x"><p className="m-kicker m-amber">AXNO ENTERPRISE / PARTNERSHIPS</p><h1>A dependable engineering partner behind your delivery.</h1><p>AXNOVATECH is building partnerships with software companies, digital agencies, consultancies and product teams that need additional development capability.</p><div className="m-facts"><Link href="/contact?type=Partnership" className="m-btn">Discuss a partnership <ArrowRight size={16}/></Link><Link href="/work" className="m-more">View selected work</Link></div></div></section>
+  <section className="m-sec container-x"><div className="m-head"><p className="m-kicker">PARTNERSHIP MODELS</p><h2>Flexible collaboration, clearly defined.</h2></div><div className="m-cols m-cols3">{models.map(([t,d],i)=><article key={t}><span className="m-kicker">0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}</div></section>
+  <section className="m-sec m-paper"><div className="container-x m-two"><div><p className="m-kicker">CAPABILITIES</p><h2 className="m-h2b">Work packages across the software lifecycle.</h2><p className="m-lede">Depending on the project and confirmed team capacity, collaboration may cover frontend, backend, APIs, mobile, QA, cloud setup, maintenance and integrations.</p></div><ul className="m-incl">{["Frontend and full-stack development", "Backend services and API integration", "Web and mobile application development", "QA, test automation and release support", "Cloud deployment and maintenance", "Technical documentation and handover"].map(x=><li key={x}><Check size={18}/>{x}</li>)}</ul></div></section>
+  <section className="m-sec container-x"><div className="m-head"><p className="m-kicker">HOW WE START</p><h2>A transparent partner onboarding process.</h2></div><ol className="m-strip">{workflow.map((x,i)=><li key={x}><b>0{i+1} · {x}</b><span>{i===0?"Initial discussion":i===1?"Technical and commercial fit":"Documented next step"}</span></li>)}</ol></section>
+  <section className="m-sec m-dark"><div className="container-x"><div className="m-head"><p className="m-kicker m-amber">LET'S TALK DELIVERY</p><h2>Send us the project brief or capability requirement.</h2></div><p className="m-lede">Please include your technology stack, expected work package, target dates, collaboration model and any security or compliance requirements. We will review fit before making commitments.</p><Link href="/contact?type=Partnership" className="m-btn">Start partner discussion <ArrowRight size={16}/></Link></div></section>
+</div>; }

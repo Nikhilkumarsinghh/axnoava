@@ -1,0 +1,1 @@
+export async function GET(){return new Response("# Add the exact publisher record supplied by Google AdSense after approval.\n",{headers:{"Content-Type":"text/plain; charset=utf-8"}})}

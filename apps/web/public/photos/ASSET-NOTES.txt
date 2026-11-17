@@ -1,0 +1,8 @@
+AXNOVATECH media library notes
+
+The .webp files already present in this archive are legacy visual placeholders created for an earlier preview.
+They are NOT Pixabay stock photographs.
+
+For the real-photo release, run `npm run media:homepage` or `npm run media:setup` from the repository root after adding PIXABAY_API_KEY to apps/web/.env.local. The media setup script downloads Pixabay `image_type=photo` results to uniquely named local JPG files, stores source IDs and credits in manifest.json, and repairs duplicate Pixabay IDs found in an earlier manifest.
+
+The resolver now uses exact content slots only. It never silently substitutes another section's photo. Missing assets remain empty until downloaded. Keep the API key private and do not commit .env.local.

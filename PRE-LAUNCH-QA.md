@@ -1,0 +1,13 @@
+# Pre-launch QA checklist
+- [ ] `npm run build` succeeds
+- [ ] About page directory cards pass contrast review
+- [ ] Service detail page process cards are readable at 360px, 768px and 1440px
+- [ ] Service CTAs scroll to same-page enquiry form
+- [ ] Test contact and review forms using SMTP and verify delivery to nikhilkauriya04@gmail.com
+- [ ] Verify no `.env.local`, API keys or SMTP passwords are committed
+- [ ] Download local media with Pixabay setup; check unique image IDs in manifest
+- [ ] Verify all video files are under 5 MB and use muted/playsInline
+- [ ] Run Lighthouse mobile and desktop; target LCP <= 2.5s, INP < 200ms, CLS < 0.1
+- [ ] Check keyboard navigation, reduced motion, form labels and errors
+- [ ] Configure production HTTPS, WAF/rate limiting, SPF, DKIM, DMARC and backups
+- [ ] Verify canonical domain, sitemap, robots.txt and Google Search Console

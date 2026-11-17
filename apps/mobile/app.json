@@ -1,0 +1,1 @@
+{"expo":{"name":"AXNOVATECH","slug":"axnovatech","scheme":"axnovatech","version":"1.0.0","orientation":"portrait","userInterfaceStyle":"dark","plugins":["expo-router"],"ios":{"supportsTablet":true},"android":{"package":"com.axnovatech.app"}}}

@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: axnovatech-web
+    runtime: node
+    plan: free
+    region: singapore
+    branch: main
+    buildCommand: npm ci --include=dev --no-audit --no-fund && npm run build -w @axnovatech/web
+    startCommand: npm run start -w @axnovatech/web
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
+      - key: NEXT_PUBLIC_SITE_URL
+        value: https://axnovatech-web.onrender.com
+      - key: CONTACT_TO_EMAIL
+        value: nikhilkauriya04@gmail.com
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "465"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM_NAME
+        value: AXNOVATECH Website

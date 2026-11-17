@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a32"/><stop offset=".55" stop-color="#164b87"/><stop offset="1" stop-color="#061326"/></linearGradient>
+ <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#367bff"/><stop offset="1" stop-color="#123b78"/></linearGradient>
+ <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4de1dc"/><stop offset="1" stop-color="#2473bf"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5e8ff" stop-opacity=".26"/><stop offset="1" stop-color="#5aa6ff" stop-opacity=".08"/></linearGradient>
+ <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f8ff"/><stop offset=".5" stop-color="#8caed9"/><stop offset="1" stop-color="#274c7b"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#4de1dc" stop-opacity=".38"/><stop offset="1" stop-color="#4de1dc" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#a9caff" stroke-opacity=".09" stroke-width="1"/></pattern>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="18"/><feOffset dy="18"/><feComponentTransfer><feFuncA type="linear" slope=".42"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="25"/></filter>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/><rect width="1600" height="1000" fill="url(#grid)"/>
+<ellipse cx="1020" cy="450" rx="650" ry="520" fill="url(#halo)"/>
+<path d="M0 820 C350 700 570 920 900 800 S1350 720 1600 820 V1000 H0Z" fill="#020b18" opacity=".38"/>
+<g filter="url(#shadow)"><rect x="620" y="190" width="690" height="470" rx="28" fill="url(#glass)" stroke="#8eb8ff" stroke-opacity=".7"/><rect x="650" y="222" width="630" height="390" rx="15" fill="#081a32" stroke="#5b91ff" stroke-opacity=".45"/><rect x="680" y="252" width="160" height="330" rx="12" fill="#122d50"/><rect x="865" y="252" width="385" height="150" rx="12" fill="url(#blue)"/><rect x="865" y="425" width="180" height="157" rx="12" fill="#17395f"/><rect x="1060" y="425" width="190" height="157" rx="12" fill="#102946"/><path d="M895 354 L950 310 L1000 333 L1060 285 L1120 312 L1208 268" fill="none" stroke="#7cf0e4" stroke-width="7" stroke-linecap="round"/><circle cx="1208" cy="268" r="9" fill="#7cf0e4"/><g fill="#d8e8ff"><rect x="700" y="282" width="95" height="10" rx="5" opacity=".8"/><rect x="700" y="310" width="75" height="7" rx="4" opacity=".35"/><rect x="700" y="350" width="110" height="7" rx="4" opacity=".35"/><rect x="700" y="390" width="90" height="7" rx="4" opacity=".35"/><rect x="700" y="430" width="105" height="7" rx="4" opacity=".35"/></g></g><g filter="url(#shadow)" transform="translate(430 430) rotate(-12)"><rect width="210" height="330" rx="30" fill="url(#silver)" stroke="#b5d0ff" stroke-width="3"/><rect x="14" y="24" width="182" height="278" rx="18" fill="#0b2140"/><rect x="30" y="50" width="150" height="95" rx="10" fill="url(#cyan)"/><rect x="30" y="162" width="68" height="100" rx="8" fill="#1d4f82"/><rect x="110" y="162" width="70" height="100" rx="8" fill="#17365d"/></g>
+<g fill="#eaf4ff" font-family="Arial" font-size="16" letter-spacing="5" opacity=".7"><text x="95" y="100">AXNOVATECH / DIGITAL</text><text x="95" y="930">ENGINEERED FOR BUSINESS PROGRESS</text></g>
+</svg>

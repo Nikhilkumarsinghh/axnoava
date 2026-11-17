@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07142c"/><stop offset=".55" stop-color="#203d85"/><stop offset="1" stop-color="#061326"/></linearGradient>
+ <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#356dff"/><stop offset="1" stop-color="#123b78"/></linearGradient>
+ <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5be7df"/><stop offset="1" stop-color="#2473bf"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5e8ff" stop-opacity=".26"/><stop offset="1" stop-color="#5aa6ff" stop-opacity=".08"/></linearGradient>
+ <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f8ff"/><stop offset=".5" stop-color="#8caed9"/><stop offset="1" stop-color="#274c7b"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#5be7df" stop-opacity=".38"/><stop offset="1" stop-color="#5be7df" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#a9caff" stroke-opacity=".09" stroke-width="1"/></pattern>
+ <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="18"/><feOffset dy="18"/><feComponentTransfer><feFuncA type="linear" slope=".42"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="25"/></filter>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/><rect width="1600" height="1000" fill="url(#grid)"/>
+<ellipse cx="1020" cy="450" rx="650" ry="520" fill="url(#halo)"/>
+<path d="M0 820 C350 700 570 920 900 800 S1350 720 1600 820 V1000 H0Z" fill="#020b18" opacity=".38"/>
+<g filter="url(#glow)"><circle cx="970" cy="440" r="280" fill="url(#halo)"/><circle cx="970" cy="440" r="215" fill="none" stroke="#5b9bff" stroke-opacity=".5" stroke-width="2"/><circle cx="970" cy="440" r="170" fill="none" stroke="#51e4e2" stroke-opacity=".55" stroke-width="2" stroke-dasharray="8 15"/></g><g stroke="#72dff2" stroke-opacity=".65" stroke-width="3" fill="none"><path d="M970 440 L720 245 L600 365 L750 625 L970 440 L1220 245 L1360 390 L1210 650 L970 440"/><path d="M970 440 L970 165 M970 440 L970 710 M970 440 L650 440 M970 440 L1300 440" stroke-opacity=".35"/></g><g filter="url(#shadow)"><circle cx="970" cy="440" r="112" fill="url(#blue)" stroke="#a4caff" stroke-width="3"/><circle cx="970" cy="440" r="78" fill="#081b36" stroke="#6ee7e2" stroke-width="2"/><path d="M970 385 C930 385 910 415 910 445 C910 478 936 495 970 495 C1004 495 1030 478 1030 445 C1030 415 1010 385 970 385Z" fill="none" stroke="#d7faff" stroke-width="7"/><path d="M970 398 V482 M930 440 H1010" stroke="#d7faff" stroke-width="5" stroke-linecap="round"/></g><g fill="#9af4eb" stroke="#d5ffff" stroke-width="2"><circle cx="720" cy="245" r="18"/><circle cx="600" cy="365" r="13"/><circle cx="750" cy="625" r="17"/><circle cx="1220" cy="245" r="17"/><circle cx="1360" cy="390" r="13"/><circle cx="1210" cy="650" r="19"/><circle cx="970" cy="165" r="12"/><circle cx="970" cy="710" r="12"/></g><g fill="#d8eaff" font-family="Arial" font-size="18" letter-spacing="4"><text x="220" y="240">MODEL INTELLIGENCE</text><text x="1190" y="180">HUMAN IN CONTROL</text><text x="245" y="720">DATA → CONTEXT → ACTION</text></g>
+<g fill="#eaf4ff" font-family="Arial" font-size="16" letter-spacing="5" opacity=".7"><text x="95" y="100">AXNOVATECH / AI</text><text x="95" y="930">ENGINEERED FOR BUSINESS PROGRESS</text></g>
+</svg>

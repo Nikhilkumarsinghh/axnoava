@@ -1,0 +1,16 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import { catalog } from "@/data/catalog";
+import { photoAny } from "@/lib/photos";
+export const metadata:Metadata={title:"Business Solutions for Small & Growing Companies",description:"Explore 20 business software solutions from POS and inventory to CRM, booking, accounting, HR, fleet, automation and custom applications.",alternates:{canonical:"/business-solutions"}};
+const principles=["Start with the way your business works today","Choose only the modules you actually need","Plan data migration and staff training","Agree the scope, price and support in writing"];
+export default function BusinessSolutions(){
+ const image=photoAny("hero-retail","sec-solutions");
+ return <main className="m-page axn-company-page">
+  <section className="m-phero m-phero-ph">{image&&<img className="m-banner" src={image} alt="" fetchPriority="high"/>}<div className="container-x"><p className="m-kicker m-amber">AXNO BUSINESS / DIGITAL OPERATIONS</p><h1>Practical technology for the businesses that keep India moving.</h1><p>From a single shop to a growing multi-location operation, AXNOVATECH helps map everyday work to useful digital tools. Start with one workflow, make it easier and expand only when the business is ready.</p><div className="m-facts"><span><b>{catalog.businessSolutions.length} business systems</b>dedicated solution pages</span><span><b>Start small</b>grow by adding useful modules</span><Link href="/contact" className="m-btn">Discuss your business <ArrowRight size={16}/></Link></div></div></section>
+  <section className="container-x axn-detail-intro"><p className="axn-section-eyebrow">BUSINESS SOLUTION DIRECTORY</p><h2>Choose the workflow <em>you want to improve.</em></h2><p className="axn-section-lead">Each solution page explains the business use case, possible modules, implementation stages, deliverables and common questions. These are solution capabilities, not claims of ready-made packaged products.</p><div className="axn-service-directory">{catalog.businessSolutions.map((x,i)=><Link href={`/business-solutions/${x.slug}`} key={x.slug}><span>0{i+1}</span><div><h3>{x.title}</h3><p>{x.description}</p></div><ArrowUpRight size={18}/></Link>)}</div></section>
+  <section className="axn-detail-paper"><div className="container-x axn-detail-split"><div><p className="axn-section-eyebrow">HOW WE APPROACH IT</p><h2>A useful system should reduce work, <em>not add more work.</em></h2><p className="axn-section-lead">We review your users, devices, data, connectivity, existing software and reporting needs before recommending a build or integration.</p></div><ul className="axn-deliverables">{principles.map(x=><li key={x}><Check size={18}/>{x}</li>)}</ul></div></section>
+  <section className="axn-related"><div className="container-x"><p className="axn-section-eyebrow">NEXT STEP</p><h2>Start with the problem <em>you face every day.</em></h2><div className="axn-service-cta"><div><small>BUSINESS DISCOVERY</small><h2>Tell us how your business runs today.</h2><p>Share your business type, number of locations, current tools and the one task you most want to simplify.</p></div><Link href="/contact" className="axn-primary">Choose a service <ArrowRight size={17}/></Link></div></div></section>
+ </main>;
+}
